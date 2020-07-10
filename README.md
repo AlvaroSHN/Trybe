@@ -1,1 +1,3 @@
 # Trybe
+
+Repositório de exercícios
