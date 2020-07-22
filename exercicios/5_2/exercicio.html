@@ -104,7 +104,12 @@
       elementoListaUL.appendChild(elementoListaLI);
     }
 
-    //Adicione 3 tags h3, todas sendo filhas do div criado no passo 2.
+    //Passo 9 - Adicione 3 tags h3, todas sendo filhas do div criado no passo 2.
+    for (let x = 0; x < 3; x++) {
+        let tagTituloH3 = document.createElement('h3');
+        tagTituloH3.innerHTML = 'Tag ' + (x+1) +' criada com sucesso!';
+        elementoDivMain.appendChild(tagTituloH3);
+      }
 
     </script>
   </body>
