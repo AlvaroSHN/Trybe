@@ -1,0 +1,22 @@
+body {
+    background-color: rgb(253 , 251 , 251);
+  }
+
+  
+  header h1 {
+    font-family: monospace , sans-serif;
+    background: linear-gradient(-45deg , #a3de9c , #62a87c , #2a546d , #1c3955);
+  }
+  
+  article h1 {
+    text-align: center;
+  }
+  
+  .button-class{
+    border-right-color: red;
+  }
+ 
+  .requisitos_minimos {
+    text-align: center;
+  }
+  
