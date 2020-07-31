@@ -9,6 +9,7 @@ for (let i=0 ; i < arrayEstados.length ; i += 1){
 }
 
 let btn = document.getElementById('btn');
+
 btn.onclick = verificaData();
 
 
@@ -16,7 +17,6 @@ btn.onclick = verificaData();
 function verificaData(){
  let dates = document.getElementById('date');
  dates.addEventListener('keyup' , verificaData);
- let cont=0;
  let minhaData = dates.value;
  let dia=parseInt(minhaData.substr(0,2));
  let mes=parseInt(minhaData.substr(3,2));
@@ -25,10 +25,10 @@ function verificaData(){
  // dd / mm / aaaa
  // 01 2 34 5 6789
 
-if ( dia < 0 || dia >= 31) {
-    alert("erro de dia");
-} 
- if ( mes < 0 || mes >= 12) {
+if ( dia < 0 || dia > 31) {
+    alert("erro de dia");   
+    } 
+ if ( mes < 0 || mes > 12) {
     alert("erro de mês");
 } 
  if (ano < 0){
