@@ -3,9 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>teste</title>
 </head>
 <body>
+    <form action="" method="post" acntype="multipart/form-data">
+    <fieldset>
+        <label for="">Nome:</label>
+        <input type="text" required="required" placeholder="Digite seu nome" maxlength="40">
+        <br><br>
+
+        <label for="">E-mail:</label>
+        <input type="text" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" required="required" placeholder="Digite seu e-mail" maxlength="50">
+        <br><br>
+
+        <label for="">CPF:</label>
+        <input type="number" required="required" placeholder="Digite seu CPF" maxlength="11">
+        <br><br>
+
+        <label for="">Endereço:</label>
+        <input type="text" required="required" placeholder="Digite seu endereço" maxlength="200">
+        <br><br>
+
+        <label for="">Cidade:</label>
+        <input type="text" required="required" placeholder="Digite sua cidade" maxlength="28">
+        <br><br>
+
+        <label for="state">Selecione o seu estado:</label>
+        <select name="state" id="state">
+        </select>
+        <br><br>
+        
+        <p>Selecione o tipo de moradia.</p>
+        <label for="casa"><input type="radio" required="required" name="radioTipo" id="casa">Casa</label>
+        <br>
+        <label for="apt"><input type="radio" required="required" name="radioTipo" id="apt">Apartamento</label>
+        <br><br>
+
+
+        <button type="submit">Enviar</button>
+    </fieldset>
     
-</body>
+    
+    
+    
+    </form>
+
+  <script type="text/javascript" src="script.js"></script>
+
+  </body>
 </html>
