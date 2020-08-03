@@ -21,8 +21,12 @@ function converterRomanos(numeroRomano){
 
     for (let x in numeroRomano) {
         arrayAuxiliar[x] = tabelaDeNumeros[numeroRomano[x]];
-        console.log(arrayAuxiliar[x]);
+        //console.log(arrayAuxiliar[x]);
       }
+
+    for (let y in tabelaDeNumeros){
+        console.log(tabelaDeNumeros[y]);
+    }
 
 
 }
