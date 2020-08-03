@@ -4,68 +4,112 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bloco 06 - Dia 01</title>
+    <link rel="stylesheet" href="css/bulma.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="dist/css/DatePickerX.min.css">
 </head>
 <body>
     <form action="" method="post" acntype="multipart/form-data">
-    <fieldset>
-        <label for="">Nome:</label>
-        <input type="text" required="required" placeholder="Digite seu nome" maxlength="40">
-        <br><br>
+        <h1 class="title">Formulário</h1>
 
-        <label for="">E-mail:</label>
-        <input type="text" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" required="required" placeholder="Digite seu e-mail" maxlength="50">
-        <br><br>
+        <div class="fieldset">
+            <label class="label" for="" >Nome:</label>
+            <div class="control">
+                <input class="input" type="text" placeholder="Digite seu nome" maxlength="40">
+            </div>
+        </div>    
 
-        <label for="">CPF:</label>
-        <input type="number" required="required" placeholder="Digite seu CPF" maxlength="11">
-        <br><br>
+        <div class="fieldset">
+            <label class="label" for="">E-mail:</label>
+            <div class="control">
+                <input class="input" type="text" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" placeholder="Digite seu e-mail" maxlength="50">
+            </div>  
+        </div> 
 
-        <label for="">Endereço:</label>
-        <input type="text" required="required" placeholder="Digite seu endereço" maxlength="200">
-        <br><br>
+        <div class="fieldset">
+            <label class="label"for="">CPF:</label>
+            <div class="control">
+                <input class="input" type="number" placeholder="Digite seu CPF" maxlength="11">
+            </div>
+        </div>
 
-        <label for="">Cidade:</label>
-        <input type="text" required="required" placeholder="Digite sua cidade" maxlength="28">
-        <br><br>
+        <div class="fieldset">
+            <label class="label"for="">Endereço:</label>
+            <div class="control">
+                <input class="input" type="text" placeholder="Digite seu endereço" maxlength="200">
+            </div>
+        </div>
 
-        <label for="state">Selecione o seu estado:</label>
-        <select name="state" id="state">
-        </select>
-        <br><br>
+        <div class="fieldset">
+            <label class="label" for="">Cidade:</label>
+            <div class="control">
+                <input class="input" type="text" placeholder="Digite sua cidade" maxlength="28">
+            </div>
+        </div>  
+
+        <div class="fieldset">
+            <label class="label" for="state">Estado:</label>
+            <div class="control">
+                <select class="select" name="state" id="state">
+                </select>
+            </div>
+        </div>
         
-        <p>Selecione o tipo de moradia.</p>
-        <label for="casa"><input type="radio" required="required" name="radioTipo" id="casa">Casa</label>
-        <br>
-        <label for="apt"><input type="radio" required="required" name="radioTipo" id="apt">Apartamento</label>
-        <br><br>
+        <div class="fieldset">
+            <label class="label">Moradia:</label>
+            <div class="control">
+                <label class="radio" for="casa">
+                    <input type="radio" name="radioTipo" id="casa">
+                    Casa
+                </label>
 
+                <label class="radio" for="apt">
+                    <input type="radio" name="radioTipo" id="apt">
+                    Apartamento
+                </label>
+            </div>
+        </div>
 
-        <button type="submit" id="btn">Enviar</button>
-    </fieldset>
+        <div class="fieldset">
+            <div class="control">
+            <br>
+                <button class="button is-success" type="submit" id="btn">Enviar</button>
+            <br><br>
+            </div>
+        </div>
 
-    <fieldset>
-        <textarea name="" placeholder="Resumo do currículo" id="" cols="30" rows="10" maxlength="1000" required="required"></textarea>
-        <br><br>
+    <div class="fieldset">
+        <div class="control">
+            <textarea class="textarea" name="" placeholder="Resumo do currículo" id="" cols="30" rows="10" maxlength="1000" ></textarea>
+        </div>
+    </div>
 
-        <label for="">Cargo:</label>
-        <input type="text" required="required" placeholder="Digite seu cargo" maxlength="40">
-        <br><br>
+    <div class="fieldset">
+        <label class="label" for="">Cargo:</label>
+        <div class="control">
+            <input class="input" type="text" placeholder="Digite seu cargo" maxlength="40">
+        </div>
+    </div>
 
-        <label for="">Descrição do cargo:</label>
-        <input type="text" required="required" placeholder="Digite a descrição do seu cargo" maxlength="500">
-        <br><br>
+    <div class="fieldset">
+        <label class="label" for="">Descrição do cargo:</label>
+        <div class="control">
+            <input class="input" type="text" placeholder="Digite a descrição do seu cargo" maxlength="500">
+        </div>
+    </div>
 
-        <label for="">Data de início:</label>
-        <input type="text" required="required" id="date" maxlength="10" minlength="10">
-        <br><br>
-
-    </fieldset>
-    
-    
-    
-    
+    <div class="fieldset">
+        <label class="label" for="">Data de início:</label>
+        <div class="control">
+            <input class="input" type="text" id="date" maxlength="10" minlength="10" placeholder="dd/mm/aaaa">
+        </div>
+    </div>
+  
     </form>
 
+    <button id="btn2">preventDefault</button>
+
+  <script src="dist/js/DatePickerX.min.js"></script>
   <script type="text/javascript" src="script.js"></script>
 
   </body>
