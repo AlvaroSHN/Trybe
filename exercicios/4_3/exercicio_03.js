@@ -17,6 +17,6 @@ let posicao = n;
     
     console.log(resposta);
     resposta = '';
-    posicao-=1;
+    posicao-= 1;
     }
 
