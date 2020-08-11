@@ -8,5 +8,5 @@ function checkScope() {
   }
   i = 'function scope'
   console.log('Function scope i is: ', i)
-  return i
+  return i;
 }
