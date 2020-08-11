@@ -1,3 +1,5 @@
+//Modificando um array declarado como const.
+
 const s = [5, 7, 2]
 function editInPlace() {
   'use strict'

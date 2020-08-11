@@ -1,3 +1,5 @@
+//Comparando o escopo de variáveis var e let;
+
 function checkScope() {
   'use strict'
   let i = 'function scope'
