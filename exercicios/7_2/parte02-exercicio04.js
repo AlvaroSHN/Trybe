@@ -1,7 +1,4 @@
-//Crie uma função para listar os valores de um objeto. 
-//Essa função deve receber um objeto como parâmetro.
-
-//Crie uma função para mostrar o tamanho de um objeto.
+//Crie uma função para listar os valores de um objeto. Essa função deve receber um objeto como parâmetro.
 
 const lesson1 = {
   materia: 'Matemática',
