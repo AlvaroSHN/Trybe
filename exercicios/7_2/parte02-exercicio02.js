@@ -1,5 +1,3 @@
-//Crie uma função para mostrar o tamanho de um objeto.
-
 const lesson1 = {
   materia: 'Matemática',
   numeroEstudantes: 20,
@@ -20,6 +18,9 @@ const lesson3 = {
   turno: 'noite',
 };
 
-const objectSize = (object) => Object.keys(object).length;
+const listKeys = (object) => Object.keys(object);
 
-console.log(objectSize(lesson2));
+//Quando não colocamos {} não declaramos return
+
+
+console.log(listKeys(lesson1));

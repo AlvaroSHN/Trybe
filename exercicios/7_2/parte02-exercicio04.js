@@ -1,3 +1,6 @@
+//Crie uma função para listar os valores de um objeto. 
+//Essa função deve receber um objeto como parâmetro.
+
 //Crie uma função para mostrar o tamanho de um objeto.
 
 const lesson1 = {
@@ -20,6 +23,6 @@ const lesson3 = {
   turno: 'noite',
 };
 
-const objectSize = (object) => Object.keys(object).length;
+const listObjects = (object) => Object.values(object);
 
-console.log(objectSize(lesson2));
+console.log(listObjects(lesson3));
