@@ -20,9 +20,6 @@ const lesson3 = {
   turno: 'noite',
 };
 
-const getValueByNumber = (object, index) => {
-  Object.values(object)[index];
-}
+const getValueByNumber = (object, keyNumber) => Object.values(object)[keyNumber];
 
 console.log(getValueByNumber(lesson1, 0));
-// Output: 'Matématica'

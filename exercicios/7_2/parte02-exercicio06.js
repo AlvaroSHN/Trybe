@@ -29,10 +29,12 @@ const getStudents = (object) => {
   let result = 0;
   let keysArray = Object.keys(object);
   
+  console.log(keysArray);
+
   for (let i = 0 ; i < keysArray.length ; i += 1){
     result += object[keysArray[i]].numeroEstudantes;
   }
   return result;
 };
 
-console.log(getStudents(allLessons));
+//console.log(getStudents(allLessons));
