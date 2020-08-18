@@ -3,7 +3,6 @@
 const removeVowels = (word) => {
   const characters = word.split('');
   const results = [];
-
   for (let i = 0; i < characters.length; i += 1) {
     if (
       characters[i] === 'a' ||

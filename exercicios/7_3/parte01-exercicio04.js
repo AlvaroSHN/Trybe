@@ -2,7 +2,6 @@
 
 const assert = require('assert');
 // escreva a função findTheNeedle aqui
-
 let words = ['house', 'train', 'slide', 'needle', 'book'];
 let expected = 3;
 let output = findTheNeedle(words, 'needle');
