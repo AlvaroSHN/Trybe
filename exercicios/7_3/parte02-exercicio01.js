@@ -4,7 +4,6 @@ const assert = require('assert');
 const greetPeople = (people) => {
   let greeting = 'Hello ';
   let greetings = [];
-
   for (const person in people) {
     //greeting += people[person];
     greetings.push(greeting + people[person]);

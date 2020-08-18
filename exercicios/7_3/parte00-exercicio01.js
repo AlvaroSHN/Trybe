@@ -6,7 +6,6 @@
 // Teste se a mensagem de erro é "parameters must be numbers" quando realizar a chamada
 
 const assert = require('assert');
-
 function sum(a, b) {
   if (typeof a !== 'number' || typeof b !== 'number') {
     throw new Error('parameters must be numbers');
