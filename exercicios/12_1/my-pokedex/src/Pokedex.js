@@ -13,10 +13,10 @@ class Pokedex extends React.Component {
     this.setState((prevStage, _props) => ({
       pokeNumber : prevStage.pokeNumber + 1
     }))
-    if (this.state.pokeNumber > pokemonLength) this.state.pokeNumber = 0
+    if (this.state.pokeNumber > pokemonLength) this.setState({pokeNumber: 0})
   }
 
-  render() {
+  render() {   
     return (
       <div className="pokedex">
       {/* {this.props.pokemons.map(pokemon => <Pokemon key={pokemon.id} pokemon={pokemon} />)} */}
