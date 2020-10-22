@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<!-- Faça um campo que recebe um valor e esse será o valor aplicado ao botão incremento.
+Faça um campo que recebe um valor e esse será o valor aplicado ao botão decremento.
+Armazene um outro valor no state, chamado clickCount. Este campo vai contar o número de vezes que qualquer botão na tela foi clicado.
+Armazene um array no state que guarda o valor individual que foi adicionado a cada click em qualquer um dos três botões. -->
+
+<head>
+  <title>Redux basic example</title>
+  <script src="https://unpkg.com/redux@latest/dist/redux.min.js"></script>
+</head>
+
+<body>
+  <div>
+    Clicado: <span id="valueClicked">0</span> vezes
+    <br>
+    Clicked: <span id="value">0</span> times
+    <button id="increment">+</button>
+    <button id="decrement">-</button>
+    <button id="multi">Incrementa 10</button>
+    <br>
+    <label for="myValueIncrement"> Entre com o valor para incrementar
+      <input type="number" id="myValueIncrement"></input>
+    </label>
+    <br>
+    <label for="myValueDecrement"> Entre com o valor para decrementar
+      <input type="number" id="myValueDecrement"></input>
+    </label>
+    
+  </div>
+  <script type="text/javascript">
+    const INCREMENT = 'INCREMENT'
+    const DECREMENT = 'DECREMENT'
+    const CLICK_COUNT = 'CLICK_COUNT';
+
+    function counterReducer(state = 0, {type, value}) {
+      switch (type) {
+        case INCREMENT:
+          return state + value;
+        case DECREMENT:
+          return state - value;
+        default:
+          return state;
+      }
+    }
+
+    function newCounterReducer(state = 0, {type, value}) {
+      switch (type) {
+        case CLICK_COUNT:
+          return state + value;
+        default:
+          return state;
+      }
+    }
+
+    const store = Redux.createStore(counterReducer)
+    const newStore = Redux.createStore(newCounterReducer)
+
+    document.getElementById('increment').addEventListener('click', () => {
+      let valor = parseInt(document.getElementById('myValueIncrement').value);
+      !valor ? valor = 0 : valor;
+      store.dispatch({ type: INCREMENT, value: valor })
+      newStore.dispatch({ type: CLICK_COUNT, value: 1 })
+    });
+
+    document.getElementById('decrement').addEventListener('click', () => {
+      let valor = parseInt(document.getElementById('myValueDecrement').value);
+      !valor ? valor = 0 : valor;
+      store.dispatch({ type: DECREMENT, value: valor })
+      newStore.dispatch({ type: CLICK_COUNT, value: 1 })
+    });
+
+    document.getElementById('multi').addEventListener('click', () => {
+      store.dispatch({ type: INCREMENT, value: 10 })
+      newStore.dispatch({ type: CLICK_COUNT, value: 1 })
+    });
+    
+    store.subscribe(() => { 
+      document.getElementById('value').innerHTML = store.getState().toString()
+    });
+
+    newStore.subscribe(() => { 
+      document.getElementById('valueClicked').innerHTML = newStore.getState().toString()
+    });
+
+    
+  </script>
+</body>
+
+</html>
