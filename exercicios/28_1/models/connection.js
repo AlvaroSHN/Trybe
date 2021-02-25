@@ -1,6 +1,6 @@
 const { MongoClient } = require('mongodb');
 
-const MONGO_DB_URL = 'mongodb://127.0.0.1:27017/';
+const MONGO_DB_URL = 'mongodb://127.0.0.1:27017';
 const DATABASE = 'jwt_exercise'
 
 const connection = async () => {
@@ -10,8 +10,11 @@ const connection = async () => {
   })
     .then((conn) => conn.db(DATABASE))
     .catch((err) => {
+      console.error(err);
       process.exit();
     });
 };
 
 module.exports = connection;
+
+
