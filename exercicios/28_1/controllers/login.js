@@ -20,6 +20,7 @@ module.exports = async (req, res) => {
   };
 
   const token = jwt.sign({ data: user }, secret, jwtConfig);
+  console.log(token)
 
   return res.status(200).json({token, message: 'Login efetuado com sucesso'});
   } catch (e) {
